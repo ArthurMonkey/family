@@ -8,10 +8,10 @@ typedef int Status;
 typedef struct DNode {
 	Elemtype data;
 	struct DNode* prior, * next;
-}DNode;
+}DNode,*DLinkList;
 DNode* Create() {//创建头节点
 	DNode* L = (DNode*)malloc(sizeof(DNode));
-	if (L = NULL) return false;
+	if (L = NULL) return NULL;
 	L->prior = L;
 	L->next = L;
 	return L;
