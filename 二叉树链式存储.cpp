@@ -188,6 +188,24 @@ void DestoryBinaryTree(BiTnode* T) {//销毁二叉树
 	DestoryBinaryTree(T->rchild);
 	free(T);
 }
+
+//寻找二叉树中值为x的节点的所有祖先
+//模版：递归遍历且利用栈来存储节点，
+void Ancestor(BiTree T, Elemtype x) {
+	BiTree Stack[maxsize];
+	int top = -1;
+	if (T != NULL) {
+		Stack[++top] = T;
+		if (T->data == x) {
+			for (int i = 0; i <=top; i++) {
+				visit(Stack[i]);
+			}
+		}
+		Ancestor(T->lchild, x);
+		Ancestor(T->rchild, x);
+		--top;//退栈
+	}
+}
 int main() {
 	//定义一个根节点==定义一颗空树
 	BiTnode* root = NULL;

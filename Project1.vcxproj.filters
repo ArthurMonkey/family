@@ -54,5 +54,14 @@
     <ClCompile Include="红皮书算法训练--链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="红皮书算法训练--树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="平衡二叉树AVL.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="树，森林.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
